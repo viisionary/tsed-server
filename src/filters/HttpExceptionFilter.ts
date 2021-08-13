@@ -7,10 +7,6 @@ export class HttpExceptionFilter implements ExceptionFilterMethods {
         const {response, logger} = ctx;
         const error = this.mapError(exception);
         const headers = this.getHeaders(exception);
-        //
-        // logger.error({
-        //     error
-        // });
 
         const {message, name} = error;
         response

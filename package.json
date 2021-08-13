@@ -32,10 +32,6 @@
     "@tsed/socketio": "^6.49.1",
     "@tsed/swagger": "^6.49.1",
     "ajv": "7.2.4",
-    "apollo-datasource": "^0.9.0",
-    "apollo-datasource-rest": "^0.13.0",
-    "apollo-server-express": "^2.25.0",
-    "apollo-server-koa": "^2.24.0",
     "aws-sdk": "^2.910.0",
     "class-validator": "^0.13.1",
     "cross-env": "^7.0.3",
@@ -51,6 +47,7 @@
     "mongoose": "^5.12.9",
     "passport": "^0.4.1",
     "socket.io": "^4.1.2",
+    "socket.io-client": "^4.1.2",
     "type-graphql": "^1.1.1",
     "uuid": "^8.3.2"
   },

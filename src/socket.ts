@@ -49,9 +49,4 @@ export class MySocketService {
         this.nsp.send("hi", "everyone!");
     }
 
-    @Get("/:roomId")
-    joinRoom(@BodyParams("payload") payload:Pick<User, 'id'>,@PathParams("roomId") roomId: string){
-        console.log(payload, roomId)
-
-    }
 }

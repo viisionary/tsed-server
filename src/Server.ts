@@ -9,8 +9,11 @@ import "@tsed/swagger";
 import {config, rootDir} from "./config";
 import {IndexCtrl} from "./controllers/pages/IndexController";
 import './filters/HttpExceptionFilter'
+import {join} from "path";
 
 const methodOverride = require("koa-override");
+
+console.info(rootDir)
 
 @Configuration({
     ...config,
@@ -24,6 +27,14 @@ const methodOverride = require("koa-override");
         ],
         "/auth": [],
         "/": [IndexCtrl]
+    },
+    statics: {
+        "/": [
+            {
+                root: `${join(rootDir, "..")}/public`,
+                // ... statics options
+            }
+        ]
     },
     swagger: [
         {
