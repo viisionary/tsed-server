@@ -47,15 +47,6 @@ export class UploadController {
                 return `/media/${resumableFilename}`
             }
             await access(`./public/media/${resumableChunkNumber}-${resumableIdentifier}-${resumableFilename}`, constants.R_OK | constants.W_OK);
-            // if (resumableTotalChunks === resumableChunkNumber) {
-            //     await contactChunks({
-            //         resumableTotalChunks,
-            //         resumableIdentifier,
-            //         resumableChunkNumber,
-            //         resumableFilename
-            //     })
-            //     return '传输完成'
-            // }
             return resumableChunkNumber
         } catch (e) {
             throw(new PaymentRequired("Not Found"));

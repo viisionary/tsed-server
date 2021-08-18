@@ -1,4 +1,4 @@
-import {Configuration, Inject} from "@tsed/di";
+import {Configuration, Inject} from "@tsed/common";
 import {PlatformApplication} from "@tsed/common";
 import "@tsed/platform-koa"; // /!\ keep this import
 import bodyParser from "koa-bodyparser";
